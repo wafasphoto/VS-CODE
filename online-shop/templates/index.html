@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Shop</title>
+</head>
+
+<body>
+    <h1>Daftar Produk</h1>
+    <a href="/cart">Lihat Keranjang</a>
+    <hr>
+
+    {% for product in products %}
+    <h3>{{ product.name }}</h3>
+    <p>Harga: Rp {{ product.price }}</p>
+    <a href="/detail/{{ product.id }}">Detail</a> |
+    <a href="/add_to_cart/{{ product.id }}">Tambah ke Keranjang</a>
+    <hr>
+    {% endfor %}
+</body>
